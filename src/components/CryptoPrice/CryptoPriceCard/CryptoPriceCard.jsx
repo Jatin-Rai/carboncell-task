@@ -15,9 +15,12 @@ const CryptoPriceCard = ({ currency, rate, symbol }) => {
     };
 
     return (
-        <div className="rounded-lg p-6 shadow bg-gray-900 text-white hover:shadow-green-500">
+        <div className="rounded-lg p-6 shadow-xl hover:shadow-green-500">
             <h3 className="text-lg font-semibold mb-2">{currency}</h3>
-            <p className="text-xl font-bold text-green-400"><span className='text-yellow-400'>{convertSymbol(symbol)}</span> {rate}</p>
+            <p className="text-xl font-bold text-green-400">
+                <span className='text-yellow-400'>{convertSymbol(symbol)} </span>
+                {rate}
+            </p>
         </div>
     );
 };
