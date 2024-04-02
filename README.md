@@ -15,7 +15,7 @@ This is a simple React application with sidebar navigation, metamask wallet conn
 
    ```bash
    git clone https://github.com/Jatin-Rai/carboncell-task
-   cd carboncell
+   cd carboncell-task
    ```
 
 2. Install dependencies using npm or yarn:
