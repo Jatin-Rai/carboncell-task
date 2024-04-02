@@ -4,17 +4,36 @@ import { CryptoPrice, Home, NavigationBar, Population } from "./components";
 import { FiMenu } from "react-icons/fi";
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen(isSidebarOpen => !isSidebarOpen);
+    setIsSidebarOpen((prev) => !prev);
   };
 
   return (
-    <>
-      <main className="flex">
-        {isSidebarOpen ? <NavigationBar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} /> : <FiMenu className="absolute top-4 left-4 text-4xl cursor-pointer hover:text-green-500" onClick={toggleSidebar} />}
-        <div className={`content-wrapper transition-all duration-500 ease-in-out ${isSidebarOpen ? "translate-x-10" : "translate-x-28"}`}>
+    <div className="flex flex-col h-screen">
+      <NavigationBar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <main className="flex flex-grow overflow-y-auto gap-20">
+        {isSidebarOpen ? (
+          <div className="flex-shrink-0 w-64 bg-green-500">
+            <div className="absolute top-4 left-4">
+              <FiMenu
+                className="text-4xl text-white cursor-pointer hover:text-green-500"
+                onClick={toggleSidebar}
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="flex-shrink-0">
+            <div className="absolute top-4 left-4">
+              <FiMenu
+                className="text-4xl text-white cursor-pointer hover:text-green-500"
+                onClick={toggleSidebar}
+              />
+            </div>
+          </div>
+        )}
+        <div className="flex-1 p-5">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/population" element={<Population />} />
@@ -22,7 +41,7 @@ function App() {
           </Routes>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 

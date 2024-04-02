@@ -1,10 +1,14 @@
+import WalletConnector from "./WalletConnector";
 
 const Home = () => {
     return (
-        <div className="mt-5">
-            <h3 className="text-4xl">Carbon Cell Assessment</h3>
+        <div className="flex flex-col gap-20">
+            <h3 className="text-3xl mt-4 font-semibold">Carbon Cell Assessment</h3>
+            <div className="flex items-center justify-center">
+                <WalletConnector />
+            </div>
         </div>
     )
 }
 
-export default Home
+export default Home;

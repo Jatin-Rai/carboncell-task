@@ -41,19 +41,18 @@ const Population = () => {
 
     const sortedData = data.data.sort((a, b) => a.Year - b.Year);
     const nation = data.data[0].Nation;
-
     const { annotations } = data.source[0]
 
     return (
-        <div className="mx-3 mt-6">
-            <h2 className='text-3xl font-semibold mb-10'>{nation} Population Data</h2>
-            <div className='w-5/6 h-auto'>
+        <div className="mt-5 mx-auto max-w-screen-lg">
+            <h2 className='text-3xl font-semibold mb-6'>{nation} Population Data</h2>
+            <div className='w-full h-auto'>
                 <Line
                     data={{
                         labels: sortedData.map(item => item.Year),
                         datasets: [
                             {
-                                label: "Population(in Millions)",
+                                label: "Population (in Millions)",
                                 data: sortedData.map(item => item.Population / 1000000),
                                 borderColor: 'lightgreen',
                                 backgroundColor: 'white',
@@ -62,15 +61,16 @@ const Population = () => {
                         ]
                     }}
                     options={chartOptions}
+                    height={100}
                 />
-                <div className='mt-6 text-center text-sm'>
-                    <p>{annotations.source_name} - {annotations.dataset_name}</p>
-                    <p className='text-xs italic mt-4'>
-                        {annotations.source_description} Refer
-                        <a href={annotations.dataset_link} target="_blank" rel="noopener noreferrer"> {annotations.dataset_link} </a>
-                        for more details
-                    </p>
-                </div>
+            </div>
+            <div className='mt-6 text-center text-sm'>
+                <p>{annotations.source_name} - {annotations.dataset_name}</p>
+                <p className='text-xs italic mt-2'>
+                    {annotations.source_description} Refer
+                    <a href={annotations.dataset_link} target="_blank" rel="noopener noreferrer"> {annotations.dataset_link} </a>
+                    for more details
+                </p>
             </div>
         </div>
     );
