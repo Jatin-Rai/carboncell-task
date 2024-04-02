@@ -1,6 +1,6 @@
-import useFetch from '../hooks/useFetch';
-import CryptoPriceCard from './CryptoPriceCard';
-import Spinner from './Spinner';
+import useFetch from '../../hooks/useFetch';
+import CryptoPriceCard from './CryptoPriceCard/CryptoPriceCard';
+import Spinner from '../Spinner/Spinner';
 
 const CryptoPrice = () => {
     const { data, loading, error } = useFetch("https://api.coindesk.com/v1/bpi/currentprice.json");

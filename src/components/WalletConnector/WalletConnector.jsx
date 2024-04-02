@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Web3 from 'web3';
-import Message from './Message';
+import Message from '../Message/Message';
 
 function WalletConnector() {
     const [connected, setConnected] = useState(false);

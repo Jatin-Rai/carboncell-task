@@ -1,7 +1,7 @@
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import { defaults } from 'chart.js/auto';
 import { Line } from 'react-chartjs-2';
-import Spinner from "./Spinner";
+import Spinner from "../Spinner/Spinner";
 
 defaults.color = 'white';
 

@@ -1,13 +1,11 @@
-import NavigationBar from "./NavigationBar";
-import Home from "./Home";
-import Population from "./Population";
-import CryptoPrice from "./CryptoPrice";
-import Spinner from "./Spinner";
+import NavigationBar from "./NavigationBar/NavigationBar";
+import Home from "./Home/Home";
+import Population from "./Population/Population";
+import CryptoPrice from "./CryptoPrice/CryptoPrice";
 
 export {
     NavigationBar,
     Home,
     Population,
     CryptoPrice,
-    Spinner
 }

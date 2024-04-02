@@ -1,4 +1,4 @@
-import WalletConnector from "./WalletConnector";
+import WalletConnector from "../WalletConnector/WalletConnector";
 
 const Home = () => {
     return (
