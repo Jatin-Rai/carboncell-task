@@ -1,51 +1,52 @@
-# React App with Sidebar Navigation
+# Simple React Application 
 
-This is a simple React application template with sidebar navigation. It allows you to create a navigation bar on the left side of the screen, which can be toggled open and closed using a menu button. This template is suitable for building applications with multiple pages/routes.
+This is a simple React application with sidebar navigation, metamask wallet connection, population data chart and bitcoin prices in USD, GBP and EUR.
 
 ## Features
 
-- Sidebar navigation with toggle functionality.
-- Routing using React Router (`react-router-dom`).
-- Integration with custom components: `Home`, `Population`, `CryptoPrice`, and `NavigationBar`.
-- Responsive layout.
+- **Sidebar Navigation**: Easily create a navigation bar on the left side of the screen with toggle functionality.
+- **Routing**: Utilizes React Router (`react-router-dom`) for seamless page navigation.
+- **Custom Components**: Integration with custom components such as `Home`, `Population`, `CryptoPrice`, and `NavigationBar`.
+- **Responsive Layout**: Ensures a responsive layout that adapts to various screen sizes.
 
 ## Installation
 
 1. Clone the repository:
 
-```bash
-git clone <repository_url>
-cd react-sidebar-navigation
-```
+   ```bash
+   git clone https://github.com/Jatin-Rai/carboncell-task
+   cd carboncell
+   ```
 
-2. Install dependencies:
+2. Install dependencies using npm or yarn:
 
-```bash
-npm install
-or
-yarn
-```
+   ```bash
+   npm install
+   ```
+
+   or
+
+   ```bash
+   yarn
+   ```
 
 3. Start the development server:
 
-```bash
-npm run dev
-or
-yarn dev
-```
+   ```bash
+   npm run dev
+   ```
 
-## Usage
+   or
 
-1. Customize the components under the `src/components` directory according to your application needs.
-2. Define routes for your pages in the `App` component using `react-router-dom`.
-3. Adjust styling and layout as necessary in the `App` component and other custom components.
+   ```bash
+   yarn dev
+   ```
 
 ## Dependencies
 
-- React (`^17.0.2`)
-- React Router DOM (`^5.3.0`)
-- React Icons (`^4.3.0`)
-
-## Contributing
-
-Contributions are welcome! Feel free to submit any issues or pull requests to improve this template.
+- React (`^18.2.0`)
+- React Router DOM (`^6.22.3`)
+- React Icons (`^5.0.1`)
+- Chart.js (`^4.4.2`)
+- React Chartjs 2 (`^5.2.0`)
+- Web3 (`^4.7.0`)
