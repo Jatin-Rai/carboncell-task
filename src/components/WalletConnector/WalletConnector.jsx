@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Web3 from 'web3';
 import Message from '../Message/Message';
+import MetaMaskIcon from '../../assets/metamask.svg'
 
 function WalletConnector() {
     const [connected, setConnected] = useState(false);
@@ -34,10 +35,10 @@ function WalletConnector() {
 
     return (
         <div className='text-center'>
-            <button onClick={connectToMetaMask} className={`px-6 py-2 rounded ${!connected ? 'border-2 border-green-500 text-green-500  hover:bg-green-500 hover:text-white' : 'text-gray-200 bg-gray-500'}`} disabled={connected}>{!connected ? "Connect MetaMask Wallet" : "MetaMask Wallet Connected"}</button>
+            <button onClick={connectToMetaMask} className={`flex items-center gap-5 px-6 py-2 rounded ${!connected ? 'border-2 border-green-500 text-green-500  hover:bg-green-500 hover:text-white' : 'text-white bg-green-500'}`} disabled={connected}>{!connected ? "Connect Wallet" : "Wallet Connected"} <img src={MetaMaskIcon} width={50} alt="metamask" /> </button>
 
             {error && <Message message={error} color={"bg-red-500"} />}
-            {connected && <Message message={"Wallet Connected Successfully!"} color={"bg-green-500"} />}
+           
         </div>
     );
 }
