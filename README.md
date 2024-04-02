@@ -42,6 +42,10 @@ This is a simple React application with sidebar navigation, metamask wallet conn
    yarn dev
    ```
 
+## Stylings
+
+- TailwindCSS
+
 ## Dependencies
 
 - React (`^18.2.0`)
